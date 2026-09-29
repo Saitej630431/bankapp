@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: white;
+}
+
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 15px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+ .header {
+  width: 99%;
+  height: 95px;
+  margin: 0 auto;
+
+  background-color: #08088f;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+.logo-box {
+  width: 90px;
+  height: 92px;
+
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo-box img {
+  width: 85px;
+  height: auto;
+}
+
+
+.header h1 {
+  color: white;
+
+  font-size: 23px;
+
+  margin-left: 15px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-container input{
+  border-radius: 10px;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+
+  margin-right: 5px;
+}
+
+
+
+.search-container input {
+  width: 160px;
+  height: 30px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 20px;
+
+  padding: 0 15px;
+
+  font-size: 13px;
+}
+
+
+.search-container button {
+  height: 28px;
+  width: 35px;
+
+  margin-left: -35px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+ 
+
+/* =========================
+   BANK APPLICATION
+========================= */
+
+.bank-card{
+  width: 62%;
+
+  margin: 20px auto;
+  background-color: #47405f;
+  border-radius: 12px;
+
+  padding: 30px 18px 18px;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.account-details {
+  text-align: center;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+}
+
+
+.account-details p {
+  margin-bottom: 16px;
+}
+
+
+.balance {
+  margin-top: 32px;
+}
+.positive {
+  color: #00d000;
+}
+.negative {
+  color: red;
+}
+
+
+.available-btn {
+  margin-left: 10px;
+
+  padding: 8px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color:white;
+
+  color: green;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   TRANSACTION CONTROLS
+========================= */
+
+.transaction-controls {
+  background-color: #35158c;
+
+  border-radius: 10px;
+
+  height: 60px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+
+.transaction-controls input {
+  width: 175px;
+
+  height: 30px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 0 12px;
+
+  outline: none;
+}
+
+
+.action-btn {
+  height: 32px;
+
+  padding: 0 14px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background-color: #777;
+
+  color: black;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.action-btn:hover {
+  background-color: #aaa;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   TRANSACTION HISTORY
+========================= */
+
+.transaction-card {
+  width: 87%;
+
+  margin: 20px auto;
+
+  background-color: #47405f;
+
+  border-radius: 12px;
+
+  padding: 32px 18px 18px;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+
+.transaction-card h2 {
+  color: white;
+
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  font-size: 23px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+
+th,
+td {
+  border: 1px solid #aaa;
+
+  padding: 10px;
+
+  text-align: center;
+}
+
+
+th {
+  background-color: #45405e;
+
+  font-weight: bold;
+}
+
+
+td {
+  background-color: #494363;
+}
+
+
+.credit {
+  color: #00e000;
+
+  font-weight: bold;
+}
+
+
+.debit {
+  color: red;
+
+  font-weight: bold;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .header h1 {
+    font-size: 17px;
+  }
+
+  .bank-card {
+    width: 90%;
+  }
+
+  .transaction-card {
+    width: 95%;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .header {
+    height: auto;
+
+    padding: 10px;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .logo-container {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .search-container {
+    margin: 5px 0;
+  }
+
+
+  .bank-card {
+    width: 95%;
+  }
+
+
+  .transaction-controls {
+    height: auto;
+
+    padding: 15px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .transaction-controls input {
+    width: 100%;
+  }
+
+
+  .transaction-card {
+    width: 98%;
+  }
+
+}
